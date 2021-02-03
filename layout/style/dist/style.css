@@ -1,0 +1,35 @@
+nav-bar, application {
+  background: linear-gradient(117.93deg, rgba(32, 26, 26, 0.296) 0%, rgba(21, 21, 21, 0.148) 100%);
+  backdrop-filter: blur(42px);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background: url("../src/img/bckg1.png") no-repeat;
+  background-size: cover;
+}
+
+application {
+  height: 100vh;
+  width: 100vw;
+}
+
+nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  min-height: 56px;
+}
+nav-bar h1 {
+  grid-column: 2/3;
+  padding: 0;
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+}
+nav-bar nav-settings {
+  justify-self: end;
+  align-self: center;
+  padding-right: 10px;
+}

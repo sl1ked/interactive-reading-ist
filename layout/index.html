@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <application>
+    <nav-bar>
+        <h1>Список для чтения</h1>
+        <nav-settings><span class="iconify" data-inline="false" data-icon="zmdi:settings" style="color: #ffffff; font-size: 28px;"></span></nav-settings>
+    </nav-bar>
+    <tab>
+        <header>
+            <tab-header-element>Все</tab-header-element>
+            <tab-header-element class="focus">Актуальное</tab-header-element>
+            <tab-header-element>Прочитаное</tab-header-element>
+        </header>
+        <tab-body>
+            <tab-filter>
+               <tab-filter-section>
+                   <h2>Раздел</h3>
+                    <tab-filter-section-elelment>Web</tab-filter-section-elelment> 
+                    <tab-filter-section-elelment>DataScience</tab-filter-section-elelment> 
+                    <tab-filter-section-elelment>ClearCode</tab-filter-section-elelment> 
+                    <tab-filter-section-elelment>Back-End</tab-filter-section-elelment> 
+                    <tab-filter-section-add>+</tab-filter-section-add> 
+                </tab-filter-section> 
+                <tab-filter-category>
+                   <h2>Категория</h3>
+                    <tab-filter-category-element>дизайн</tab-filter-category-element>
+                    <tab-filter-category-element>ai</tab-filter-category-element>
+                    <tab-filter-category-element>vue.js</tab-filter-category-element>
+                    <tab-filter-category-add>+</tab-filter-category-add>
+                </tab-filter-category>
+            </tab-filter>
+            <tab-content>
+                <article>
+                    <img src="src/img/article1.png" alt="">
+                    <h2>4 Must-Know Higher-Order Functions in JavaScript</h2>
+                    <article-date-add>добавлено: 19.01.2021</date-add>
+                    <article-source>источник: Medium</article-source>
+                    <h3>Higher-Order functions are one of those things in JavaScript that sounds incredibly complicated, but isn’t.</h3>
+                    <article-tags>
+                        <tag>WEB</tag>
+                        <tag>JavaScript</tag>
+                        <tag>+3</tag>
+                    </article-tags>
+                    <button class="add-in-read">Прочитано</button>
+                    <button class="go-to-source">Перейти</button>
+                </article>
+            </tab-content>
+        </tab-body>
+    </tab>
+    </application>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </body>
 </html>
