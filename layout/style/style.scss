@@ -10,9 +10,14 @@ body{
     height: 100vh;
     background: url('../src/img/bckg1.png') no-repeat;
     background-size: cover ;
+    color: #ffffff;
+
 
 /* unfocus */
 
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
 }
 application{
     @extend %dark_glass_bckg;
@@ -65,7 +70,96 @@ tab{
     }
 
 }
+%block-filter{
+    padding: 5px 20px;
+            background: linear-gradient(117.93deg, rgba(181, 175, 175, 0.2212) 0%, rgba(21, 21, 21, 0.1036) 100%);
+            border: 1px solid  rgba(173, 173, 173, 0.849) ; 
+            border-radius: 10px;
+            width: max-content;
+            margin:  10px 11px 0 0;
+}
 tab-body{
     display: grid;
     grid-template-columns: 286px auto;
+    tab-filter{
+        padding: 20px;
+        border-right: 1px solid rgba(173, 173, 173, 0.849) ;
+    }
+    & category-elements{
+        display: inline-flex;
+        flex-wrap: wrap;
+
+        .tab-filter-category-element::before{
+            // box-sizing: border-box;
+        }
+        .tab-filter-category-element{
+            @extend %block-filter
+        }
+        
+    }
+    & section-elelments{
+        display: inline-flex;
+        flex-wrap: wrap;
+
+        .tab-filter-section-elelment::before{
+            // box-sizing: border-box;
+        }
+        .tab-filter-section-elelment{
+            @extend %block-filter
+        }
+    }
+}
+.article{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 200px auto;
+    border-bottom:1px solid  rgba(173, 173, 173, 0.849) ;
+    &>img{
+        justify-self: center;
+    align-self: center; 
+    border: 11px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    }
+    .article-content{
+        padding: 0 10px;
+    .article-info{
+        display: flex;
+        color: #c4c4c4;
+        font-size: 16px;
+        
+    }
+    .article-tags{
+        font-size: 12px;
+        margin: 10px 0 ;
+        tag::before,tag::after{
+            box-sizing: border-box;
+        }
+        tag{
+            padding: 2px 10px;
+            @extend %block-filter;
+            margin: 0;
+        }
+    }
+    .button-group{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .add-in-read{
+            padding: 5px 25px;
+            color: #ffffff;
+            font-size: 22px;
+            background: linear-gradient(117.93deg, rgba(0, 155, 34, 0.2) 0%, rgba(0, 0, 0, 0.16) 100%);
+            border-radius: 10px;
+            border:1px solid  rgba(173, 173, 173, 0.849) ;
+        }
+        .go-to-source{
+            padding: 5px 25px;
+            color: #ffffff;
+            font-size: 22px;
+            background: linear-gradient(117.93deg, rgba(82, 54, 255, 0.2) 0%, rgba(61, 0, 47, 0.16) 100%);
+            border-radius: 10px;
+            border:1px solid  rgba(173, 173, 173, 0.849) ;
+            
+        }
+    }}
 }
