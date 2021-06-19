@@ -23,7 +23,9 @@ export default {
   emits: ["addArticle"],
   methods: {
     addItem() {
-      this.$emit("addArticle", this.text);
+      this.$emit("addArticle", this.text.trim());
+      this.text ="";
+      this.text =this.text.trim();
     },
   },
 };

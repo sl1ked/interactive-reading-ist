@@ -75,18 +75,21 @@ export default {
     this.allArray = await getArticles();
   },
   methods: {
-    addItem(ev) {
-      this.allArray.push({
-        image: ev,
-        header: "null",
-        tags: [],
-        read: false,
-      });
-      // this.allArray.push({
-      //   image: this.text,
-      //   addDate: new Date().toLocaleDateString(),
-      // });
-      getMetaFromURl(ev);
+    async addItem(ev) {
+      this.allArray.push({});
+      const endItemIndex = this.allArray.length - 1;
+      const metaData = await getMetaFromURl(ev);
+      if (Object.keys(metaData).length !== 0) {
+        this.allArray[endItemIndex]=({
+          image: metaData.image?.url,
+          header: metaData.title,
+          tags: [],
+          read: false,
+          text: metaData.description,
+        });
+        return;
+      }
+      this.allArray[endItemIndex].pop();
     },
   },
 };
