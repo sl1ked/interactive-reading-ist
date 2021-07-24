@@ -108,13 +108,40 @@ tab-body{
             @extend %block-filter
         }
     }
+    tab-content{
+        overflow-y: scroll;
+        height: 75vh;
+    }
+    tab-form{
+
+        grid-column: 2/3;
+        form{
+            display: flex;
+        }
+        & textarea{
+          width: 95%; 
+          margin:1px 10px; 
+          resize:none;
+          color: #fff;
+          padding: 5px;
+          @extend %block-filter;
+        }
+        & button{
+            color: #fff;
+            @extend %block-filter;
+            margin: 15px; 
+        }
+        
+            
+    } 
 }
 .article{
     padding: 10px;
     display: grid;
     grid-template-columns: 200px auto;
+    
     border-bottom:1px solid  rgba(173, 173, 173, 0.849) ;
-    &>img{
+    &>img{ 
         justify-self: center;
     align-self: center; 
     border: 11px solid rgba(255,255,255,0.1);
@@ -122,10 +149,11 @@ tab-body{
     }
     .article-content{
         padding: 0 10px;
+        display: grid;
     .article-info{
         display: flex;
         color: #c4c4c4;
-        font-size: 16px;
+        font-size: 14px;
         
     }
     .article-tags{
@@ -140,22 +168,36 @@ tab-body{
             margin: 0;
         }
     }
+
+    h2{
+        font-size: 22px;
+    }
+    h3{
+        font-size: 18px;        
+    }
     .button-group{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         .add-in-read{
-            padding: 5px 25px;
+            padding: 2px 25px;
+            line-height: 16px;
             color: #ffffff;
-            font-size: 22px;
+            font-size: 16px;
             background: linear-gradient(117.93deg, rgba(0, 155, 34, 0.2) 0%, rgba(0, 0, 0, 0.16) 100%);
             border-radius: 10px;
             border:1px solid  rgba(173, 173, 173, 0.849) ;
+            .ready{
+                font-size: 18px;
+            }
+        }
+        .add-in-read_clear{
+            background: linear-gradient(117.93deg, rgba(0, 99, 155, 0.2) 0%, rgba(0, 0, 0, 0.16) 100%);
         }
         .go-to-source{
-            padding: 5px 25px;
+            padding: 2px 25px;
             color: #ffffff;
-            font-size: 22px;
+            font-size: 16px;
             background: linear-gradient(117.93deg, rgba(82, 54, 255, 0.2) 0%, rgba(61, 0, 47, 0.16) 100%);
             border-radius: 10px;
             border:1px solid  rgba(173, 173, 173, 0.849) ;

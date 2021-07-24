@@ -251,4 +251,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   border: 1px solid rgba(173, 173, 173, 0.849);
 }
-/*# sourceMappingURL=style.css.map */
+.section-elelments .activeCheck{
+  background: rgb(62, 62, 63);
+  color:#4e4e4e
+}
+.section-elelments  div{
+  cursor: pointer;
+}

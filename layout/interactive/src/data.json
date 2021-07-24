@@ -6,7 +6,7 @@
       "text": "Higher-Order functions are one of those things in JavaScript that sounds incredibly complicated, but isn’t.",
       "addDate": "19.01.2021",
       "src": "https://medium.com/",
-      "tags": ["web", "JS", "frontend", "clear code"],
+      "tags": [ "JS", "frontend", "clear code"],
       "read": false
     },
     {
@@ -15,7 +15,7 @@
       "text": "Higher-Order functions are one of those things in JavaScript that sounds incredibly complicated, but isn’t.",
       "addDate": "19.01.2021",
       "src": "https://medium.com/",
-      "tags": ["web", "JS", "frontend", "clear code"],
+      "tags": ["web", "JS", "frontend"],
       "read": true
     }
   ]
